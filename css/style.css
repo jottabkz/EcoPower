@@ -327,19 +327,25 @@ footer {
         margin-bottom: 10px;
 
         & h1 {
-            font-size: 2em;
-            width: 600px;
+            position: relative;
             top: -150px;
+            left: 0px;
+            font-size: 1.5em;
+            width: 100%;
+            padding: 20px;
+            
         }
 
         & button {
-            top: -180px;
-            left: 550px;
+            position: relative;
+            top: -160px;
+            left: 50%;
+            transform: translateX(-50%); /* Centralize o botão */
+            font-size: 1em; /* Reduza o tamanho da fonte */
         }
 
         & div#h-flex {
             width: 100%;
-            margin: ;
         }
     }
 
@@ -417,18 +423,21 @@ footer {
 
     #hero {
         margin-bottom: -300px;
+
         & h1 {
-            top: -100px;
-            font-size: 23px;
-            width: 300px;
+            top: -120px;
+            font-size: 1.2em;
+            width: 100%;
+            padding: 20px;
         }
 
         & button {
             top: -140px;
-            left: 280px;
-            width: 100px;
-            height: 40px;
-            font-size: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height:40px;
+            font-size: 0.8em;
         }
     }
 
@@ -445,6 +454,7 @@ footer {
     #beneficios {
         & h1 {
             font-size: 1.5em;
+            text-align: center;
         }
 
         & table {
@@ -487,6 +497,8 @@ footer {
     }
 
     footer {
+        padding: 5px;
+
         & p {
             font-size: 0.9em;
         }
@@ -499,9 +511,7 @@ footer {
             height: 20px;
             padding: 0px;
             margin: 0px;
-            position: relative;
-            top: 30px;
-            left: 20px;
+           
         }
     }
 }
