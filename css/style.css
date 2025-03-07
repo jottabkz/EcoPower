@@ -80,33 +80,31 @@ header {
 }
 
 #hero {
-    position: relative;
     margin-bottom: 200px;
-    left: 27%;
-    top: 50%;
-
 
     & img {
         width: 900px;
-        position: relative;
-        top: 20px;
-        left: 30px;
+       
         border-radius: 5px;
     }
 
     & h1 {
-        position: absolute;
-        top: 450px;
-        left: 20px;
+        position: relative;
+        top: -200px;
+        left: 0px;
         color: white;
         font-size: 3em;
-        width: 700px
+        width: 700px;
+        float: inline-start;
+        
     }
 
     & button {
-        position: absolute;
-        top: 500px;
-        left: 750px;
+        position: relative;
+        top: -300px;
+        left: 700px;
+        width: 150px;
+        float: inline-end;
         background-color: var(--destaque);
         color: white;
         border: none;
@@ -117,6 +115,14 @@ header {
         transition: background-color 0.5s;
     }
 
+    & div#h-flex {
+        height: 600px;
+        width: 900px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+    }
 }
 
 main {
@@ -125,43 +131,39 @@ main {
 }
 
 #sobre {
-    align-items: center;
     padding: 20px;
-    margin-bottom: 100px;
-
+    margin-bottom: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
     & img {
-        position: relative;
         width: 800px;
         border-radius: 5px;
-        left: 80px;
     }
 
     & h1 {
-        position: relative;
-        top: -450px;
-        left: 1335px;
+        text-align: center;
+        margin-bottom: 100px;
     }
 
     & p {
-        position: relative;
         font-size: 1.2em;
-        width: 600px;
-        top: -425px;
-        left: 1200px;
         text-align: justify;
+        width: 500px;
     }
 }
 
 #beneficios {
     margin-bottom: 100px;
     margin-top: -300px;
-    position: relative;
-    left: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     & h1 {
-        position: relative;
         margin-bottom: 30px;
-        right: 10px;
+
     }
 
     & table {
@@ -197,13 +199,12 @@ main {
 #formulario {
     margin-bottom: 100px;
     margin-top: 100px;
-    position: relative;
-    left: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     & h1 {
-        position: relative;
         margin-bottom: 30px;
-        right: 10px;
     }
 
     & form {
@@ -215,8 +216,6 @@ main {
         border: 1px solid var(--destaque2);
         border-radius: 5px;
         width: 400px;
-        position: relative;
-        left: 100px;
 
         & input {
             width: 300px;
@@ -250,9 +249,9 @@ footer {
     }
 
     & #redes-sociais {
-        position: relative;
-        left: 1800px;
-        top: -70px;
+       display: flex;
+       flex-direction: row;
+
     }
 
     & img {
@@ -278,4 +277,10 @@ footer {
         text-align: center;
         
     }
+}
+
+.f-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
