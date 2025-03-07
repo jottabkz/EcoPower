@@ -81,10 +81,11 @@ header {
 
 #hero {
     margin-bottom: 200px;
+    width: 100%;
 
     & img {
-        width: 900px;
-       
+        width: 100%;
+        max-width: 900px;
         border-radius: 5px;
     }
 
@@ -138,7 +139,8 @@ main {
     justify-content: space-around;
     
     & img {
-        width: 800px;
+        width: 100%;
+        max-width: 800px;
         border-radius: 5px;
     }
 
@@ -283,4 +285,187 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+/* ...código existente... */
+
+/* Estilos para dispositivos com largura máxima de 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & #logo {
+            height: 80px;
+        }
+
+        & ul {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        & a {
+            font-size: 1em;
+            margin: 5px 5px;
+        }
+
+        & button {
+            font-size: 1em;
+            padding: 5px 10px;
+            margin: 10px;
+        }
+    }
+
+    #hero {
+        width: 1005;
+
+        & h1 {
+            font-size: 2em;
+            width: 100%;
+            top: -150px;
+        }
+
+        & button {
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        & div#h-flex {
+            width: 100%;
+            margin: 10px;
+        }
+    }
+
+    #sobre {
+        flex-direction: column;
+        align-items: center;
+
+        & img {
+            max-width: 100%;
+        }
+
+        & p {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    #beneficios {
+        margin-top: 0;
+
+        & table {
+            width: 100%;
+        }
+    }
+
+    #depoimentos .d-flex {
+        flex-direction: column;
+        align-items: center;
+
+        & div {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    #formulario {
+        & form {
+            width: 100%;
+        }
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+
+        & #dados {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        & #redes-sociais {
+            justify-content: center;
+        }
+    }
+}
+
+/* Estilos para dispositivos com largura máxima de 480px (celulares) */
+@media (max-width: 480px) {
+    header {
+        & #logo {
+            height: 60px;
+        }
+
+        & a {
+            font-size: 0.8em;
+        }
+
+        & button {
+            font-size: 0.8em;
+            padding: 5px;
+        }
+    }
+
+    #hero {
+        & h1 {
+            font-size: 1.5em;
+            top: -100px;
+        }
+
+        & button {
+            top: -150px;
+        }
+    }
+
+    #sobre {
+        & h1 {
+            font-size: 1.5em;
+        }
+
+        & p {
+            font-size: 1em;
+        }
+    }
+
+    #beneficios {
+        & h1 {
+            font-size: 1.5em;
+        }
+
+        & td {
+            font-size: 0.9em;
+        }
+    }
+
+    #depoimentos {
+        & h1 {
+            font-size: 1.5em;
+        }
+
+        & div {
+            font-size: 0.9em;
+        }
+    }
+
+    #formulario {
+        & h1 {
+            font-size: 1.5em;
+        }
+
+        & input {
+            font-size: 0.9em;
+        }
+
+        & button {
+            font-size: 1em;
+        }
+    }
+
+    footer {
+        & p {
+            font-size: 0.9em;
+        }
+    }
 }
